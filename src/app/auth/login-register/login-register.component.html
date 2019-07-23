@@ -1,0 +1,7 @@
+<div>
+  <a *ngIf="!authService.isAuthenticated" tabindex="0" (click)="login()">Login</a>
+  <ng-container *ngIf="authService.isAuthenticated">
+    <div><strong>{{authService.user.email}}</strong></div>
+    <div><a tabindex="0" (click)="logout()">Logout</a></div>
+  </ng-container>
+</div>
